@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "63064867c4032a545ffa16a1"
+  },
+  "producto": [
+    {
+      "camisa": 1
+    },
+    {
+      "pantalones": 1
+    }
+  ],
+  "subtotal_venta": 135000,
+  "fecha_venta": "10-06-2022",
+  "impuesto_total_venta": 20000,
+  "cedula_cliente": 123456,
+  "vendedor": 127895
+}]
