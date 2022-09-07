@@ -8,4 +8,8 @@ function multiplicar(a,b){
     return (a*b);
 }
 
-
+module.exports={
+    PI,
+    sumar,
+    multiplicar
+}
