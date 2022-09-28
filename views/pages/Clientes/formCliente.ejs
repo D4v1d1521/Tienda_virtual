@@ -1,0 +1,46 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../../partials/head'); %>
+</head>
+<body>
+    <header>
+        <%- include('../../partials/header'); %> 
+    </header>
+    
+    <h1>REGISTRAR</h1>
+    <form action="/registrarCliente" method="post" class="form-control"><br>
+    
+        <label for="">Cedula</label><br/>
+        <input class="form-control" type="text" name="cedula" placeholder="Cedula"> <br>
+
+        <label for="">Nombre</label><br/>
+        <input class="form-control" type="text" name="nombre" placeholder="Nombre"><br>
+
+        <label for="">Ubicacion</label><br/>
+        <input class="form-control" type="text" name="descripcion" placeholder="Descripcion"><br>
+
+        <label for="">Precio</label><br/>
+        <input class="form-control" type="text" name="precio" placeholder="Precio"><br>
+
+        <label for="">Stock</label><br/>
+        <input class="form-control" type="number" name="stock" placeholder="Stock"><br>
+
+        <!-- <label for="">Estado</label><br/>
+        <input class="form-control" type="text" name="estado" placeholder="estado"><br/> -->
+
+        <label for="">Estado</label><br />
+        <select class="form-control" name="estado">
+            <option>Habilitado</option>
+            <option>Deshabilitado</option>
+        </select><br/>
+
+        <label for="">Imagen</label><br />
+        <input class="form-control" type="file" name="imagen" placeholder="Imagen"></br>
+        
+        <input class="btn btn-primary" type="submit" value="Registrar"> <br>
+    </form>
+    
+</body>
+</html>

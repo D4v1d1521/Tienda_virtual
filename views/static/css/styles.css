@@ -1,0 +1,681 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+* {
+    font-family: 'Playfair Display', serif;
+    overflow-x: hidden;
+}
+
+div,
+h1,
+h2,
+h3,
+button,
+a {
+    overflow-y: hidden;
+
+}
+
+
+.barra_navegacion {
+    background-color: white;
+    position: sticky;
+    width: 100%;
+    display: flex;
+    border-bottom: #000 solid 2px;
+}
+
+
+.logo {
+
+    width: 200px;
+    height: 200px;
+    margin-left: 7%;
+    margin-top: 1%;
+
+
+}
+
+
+.menu {
+    float: right;
+    margin-top: 2%;
+}
+
+
+.inicioPag {
+    background-image: url(https://img.freepik.com/fotos-premium/hombre-modelo-elegante-ropa-casual-camisa-gafas-sol-posando-al-aire-libre-calle-india-sentado-banco_151355-5337.jpg?w=2000);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: left;
+    height: 25em;
+    font-size: 40px;
+
+    color: black;
+    padding: 4%;
+    padding-top: 10%;
+}
+
+.inicioPag h1 {
+    font-size: 90px;
+
+}
+
+.inicioPag p {
+
+    padding: 1%;
+}
+
+.botonUnete {
+    text-align: center;
+    background-color: black;
+    color: white;
+    width: 250px;
+    height: 130px;
+    font-size: auto;
+    border-radius: 30px;
+    border-style: double;
+    border-color: white;
+    border-width: 10px;
+    margin-top: 5%;
+}
+
+.botonUnete:hover {
+    color: black;
+    background-color: white;
+    border-color: black;
+}
+
+
+
+
+
+.servicios {
+    text-align: center;
+    background-color: gainsboro;
+    border: #000 solid 2px;
+    color: black;
+    height: 40em;
+    margin-top: 0%;
+    padding-bottom: 5%;
+    padding-top: 2%;
+
+}
+
+.servicios h2 {
+    font-size: 60px;
+}
+
+
+.servicontenedor {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+
+
+.container {
+    position: relative;
+}
+
+.container .card {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    background: black;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.container .card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.543);
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.container .card:hover:before {
+    clip-path: circle(300px at 80% -20%);
+}
+
+.container .card:after {
+    content: '//////';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.158);
+}
+
+.container .card .imgBx {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+
+.container .card:hover .imgBx {
+    top: 0%;
+    transform: translateY(0%);
+
+}
+
+.container .card .imgBx img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    width: 270px;
+}
+
+.container .card .contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+
+.container .card:hover .contentBx {
+    height: 210px;
+}
+
+.container .card .contentBx h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 0;
+}
+
+.container .card .contentBx .size,
+.container .card .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.container .card:hover .contentBx .size {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+.container .card:hover .contentBx .color {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+}
+
+.container .card .contentBx .size h3,
+.container .card .contentBx .color h3 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+
+.container .card .contentBx .size span {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container .card .contentBx .size span:hover {
+    background: #9bdc28;
+}
+
+.container .card .contentBx .color span {
+    width: 20px;
+    height: 20px;
+    background: #ff0;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.container .card .contentBx .color span:nth-child(2) {
+    background: #9bdc28;
+}
+
+.container .card .contentBx .color span:nth-child(3) {
+    background: #03a9f4;
+}
+
+.container .card .contentBx .color span:nth-child(4) {
+    background: #e91e63;
+}
+
+.container .card .contentBx a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+    margin-top: 0;
+}
+
+.container .card:hover .contentBx a {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+
+}
+
+
+
+
+
+.promociones1 {
+    background: url(https://img.remediosdigitales.com/e9e6a1/depositphotos_321904914_l/1366_2000.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    text-align: center;
+    width: 100%;
+    height: 500px;
+    color: white;
+    float: left;
+
+    border: #000 solid;
+
+
+}
+
+.promocionesCont {
+    background-color: rgba(0, 0, 0, 0.658);
+    width: 100%;
+    height: 500px;
+}
+
+.promociones1 h2 {
+    font-size: 60px;
+    padding-top: 2%;
+    padding-bottom: 5%;
+
+
+}
+
+.promociones1 p {
+
+    font-size: 40px;
+}
+
+
+
+.promociones5 {
+    padding-top: 1%;
+}
+
+.contacto {
+    text-align: center;
+    width: 100%;
+    height: 600px;
+    background-color: gainsboro;
+    float: left;
+    color: #000;
+    font-size: 40px;
+}
+
+.contacto h2 {
+    font-size: 60px;
+}
+
+.logoInsta {
+    width: 100px;
+}
+
+.iconoInsta {
+    padding-right: 20px;
+    color: #000;
+
+}
+
+.logoFace {
+    width: 100px;
+}
+
+
+.iconoFace {
+    padding-left: 20px;
+    color: #000;
+
+}
+
+@media only screen and (max-width: 580px) {
+
+
+    .menu {
+        float: right;
+    }
+
+    .inicioPag h1 {
+        font-size: 40px;
+    }
+
+    .inicioPag {
+        background-size: 100% 26em;
+
+        height: 26em;
+        font-size: 20px;
+        color: white;
+        padding: 2%;
+        padding-top: 30%;
+    }
+
+    .inicioPag p {
+        font-size: 20px;
+
+        padding: 1%;
+    }
+
+    .botonUnete {
+
+        width: 100px;
+        height: 50px;
+        border-radius: 20px;
+        border-style: double;
+        border-color: white;
+        border-width: 10px;
+        margin-top: 5%;
+    }
+
+    .servicontenedor {
+        background-position: 1fr;
+
+    }
+
+    .servicios {
+        height: 50em;
+    }
+
+    .servicios h2 {
+        font-size: 20px;
+    }
+
+    .servicios2 {
+        height: 350px;
+        border-bottom: #000 solid;
+
+    }
+
+
+
+    .servicios2 h2 {
+        font-size: 40px;
+        padding-bottom: 5%;
+    }
+
+    .servicios2 p {
+        padding: 1%;
+        font-size: 20px;
+    }
+
+    .agendarCita {
+        height: 300px;
+    }
+
+    .agendarCita h2 {
+        font-size: 40px;
+    }
+
+    .botonReservas {
+        width: 110px;
+        height: 60px;
+        font-size: 20px;
+        border-radius: 20px;
+    }
+
+    .promociones1 {
+        height: 350px;
+    }
+
+    .promociones1 h2 {
+        font-size: 40px;
+        padding-top: 9%;
+        padding-bottom: 5%;
+
+
+    }
+
+    .promociones1 p {
+
+        font-size: 20px;
+    }
+
+
+}
+
+
+.galeria {
+    width: 100%;
+    height: 1000px;
+    background-color: yellow;
+}
+
+.rotator {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 300px;
+    height: 500px;
+    transform-style: preserve-3d;
+    animation: roter 30s linear infinite;
+}
+
+.rotator:hover {
+    animation-play-state: paused;
+}
+
+@keyframes roter {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.items {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    border: 2px solid #333;
+}
+
+.items:hover img {
+    transform: scale(1.2);
+}
+
+.items img {
+    height: 100%;
+    width: 100%;
+    transition: all 3s ease;
+}
+
+.items:first-child {
+    transform: rotateY(calc(40deg * 1)) translateZ(300px);
+}
+
+.items:nth-child(2) {
+    transform: rotateY(calc(40deg * 2)) translateZ(300px);
+}
+
+.items:nth-child(3) {
+    transform: rotateY(calc(40deg * 3)) translateZ(300px);
+}
+
+.items:nth-child(4) {
+    transform: rotateY(calc(40deg * 4)) translateZ(300px);
+}
+
+.items:nth-child(5) {
+    transform: rotateY(calc(40deg * 5)) translateZ(300px);
+}
+
+.items:nth-child(6) {
+    transform: rotateY(calc(40deg * 6)) translateZ(300px);
+}
+
+.items:nth-child(7) {
+    transform: rotateY(calc(40deg * 7)) translateZ(300px);
+}
+
+.items:nth-child(8) {
+    transform: rotateY(calc(40deg * 8)) translateZ(300px);
+}
+
+.items:nth-child(9) {
+    transform: rotateY(calc(40deg * 9)) translateZ(300px);
+}
+
+.items:nth-child(10) {
+    transform: rotateY(calc(40deg * 10)) translateZ(300px);
+}
+
+.items:nth-child(11) {
+    transform: rotateY(calc(40deg * 11)) translateZ(300px);
+}
+
+.items:nth-child(12) {
+    transform: rotateY(calc(40deg * 12)) translateZ(300px);
+}
+
+.items:nth-child(13) {
+    transform: rotateY(calc(40deg * 13)) translateZ(300px);
+}
+
+.items:nth-child(14) {
+    transform: rotateY(calc(40deg * 14)) translateZ(300px);
+}
+
+.items:nth-child(15) {
+    transform: rotateY(calc(40deg * 15)) translateZ(300px);
+}
+
+
+
+
+
+
+
+
+
+
+.modal-content {
+    background-color: rgb(255, 255, 255, 50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    height: 30em;
+    width: 25%;
+    font-size: x-large;
+    color: rgb(0, 0, 0);
+    margin-left: 1250px;
+    margin-top: 100px;
+    position: fixed;
+
+}
+
+#inicioSesion {
+    float: right;
+    text-align: center;
+    width: 600px;
+    height: 790px;
+    overflow-y: hidden;
+}
+
+.inputsIniciarSesion {
+    width: 70%;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255, 60%);
+}
+
+.inputsIniciarSesion::placeholder {
+    color: #000;
+}
+
+.modal-dialog {
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.login {
+    text-align: center;
+    background-color: black;
+    color: white;
+    width: 150px;
+    height: 60px;
+    font-size: large;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #605851;
+
+}
+
+#botonIniciarSesion {
+    background-color: black;
+    color: white;
+    border: solid black 1px;
+}
+
+#botonRegistrarse {
+    background-color: black;
+    color: white;
+    border: solid black 1px;
+    margin-top: 2%;
+
+}
+
+.botonCerrar {
+    background-color: rgb(255, 255, 255, 0%);
+    border-color: rgb(255, 255, 255, 0%);
+    width: 10%;
+    font-size: 150%;
+    margin-left: 90%;
+}

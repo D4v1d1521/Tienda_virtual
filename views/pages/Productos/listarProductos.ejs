@@ -1,0 +1,52 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../../partials/head'); %>
+</head>
+<body>
+    <header>
+        <%- include('../../partials/header'); %> 
+    </header>
+    
+    <h1>PRODUCTOS</h1>
+    <a class="btn btn-primary" href="/formProducto" style="color: white;">CREAR</a>
+    <table class="table" style="width: 1000px; margin-left: auto; margin-right: auto">
+        <thead>
+          <tr>   
+            <th scope="col">Referencia</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% prods.forEach((producto) => { %>
+            <tr>
+              <td><%= producto.referencia %></td>
+              <td><%= producto.nombre %></td>
+              <td><%= producto.descripcion %></td>
+              <td><%= producto.precio %></td>
+              <td><%= producto.stock %></td>
+              <td><%= producto.imagen %></td>
+              <td><%= producto.estado %></td>
+              <td><a class="btn btn-warning" href="/editarProducto/<%= producto._id %>">Modificar </a> </td >
+              
+              <td>
+                <form action="/eliminarProducto/<%= producto.referencia %>" method="post">
+                  <input type="hidden" value="eliminar">
+                  <button class="btn btn-danger" type="submit" >Eliminar </button> 
+                </form>
+              </td>
+            </tr>
+            <% }); %> 
+        </tbody>
+        
+      </table>
+</body>
+</html>

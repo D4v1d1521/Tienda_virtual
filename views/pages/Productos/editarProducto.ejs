@@ -1,0 +1,44 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../../partials/head'); %>
+</head>
+<body>
+    <header>
+        <%- include('../../partials/header'); %> 
+    </header>
+    
+    <h1>EDITAR</h1>
+
+    <form action="/actualizarProducto/<%= datos._id %>" method="post" class="form-control"><br>
+
+        <label for="">Referencia</label><br/>
+        <input class="form-control" type="text" name="referencia" placeholder="Referencia" value="<%= datos.referencia %>" readonly> <br>
+
+        <label for="">Nombre</label><br/>
+        <input class="form-control" type="text" name="nombre" placeholder="Nombre" value="<%= datos.nombre %>"><br>
+
+        <label for="">Descripcion</label><br/>
+        <input class="form-control" type="text" name="descripcion" placeholder="Descripcion" value="<%= datos.descripcion %>"><br>
+
+        <label for="">Precio</label><br/>
+        <input class="form-control" type="text" name="precio" placeholder="Precio" value="<%= datos.precio %>"><br>
+
+        <label for="">Stock</label><br/>
+        <input class="form-control" type="number" name="stock" placeholder="Stock" value="<%= datos.stock %>"><br>
+
+        <label for="">Estado</label><br/>
+        <select value="<%= datos.estado %>" class="form-control" name="estado">
+            <option>Habilitado</option>
+            <option>Deshabilitado</option>
+        </select><br/>
+
+        <label for="">Imagen</label><br/>
+        <input class="form-control" type="file" name="imagen" placeholder="Imagen" value="<%= datos.imagen %>"></br>
+        
+        <button class="btn btn-primary" type="submit">ENVIAR</button><br/>
+        
+    </form>         
+</body>
+</html>

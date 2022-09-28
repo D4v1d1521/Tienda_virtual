@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "63064137c4032a545ffa1675"
+  },
+  "cedula": 123456,
+  "nombre": "johan",
+  "telefono": "123654",
+  "ubicacion": {
+    "longitud": "",
+    "latitud": ""
+  },
+  "total_comprado": 10,
+  "historico_compras": {
+    "camisa": "10000"
+  }
+}]
